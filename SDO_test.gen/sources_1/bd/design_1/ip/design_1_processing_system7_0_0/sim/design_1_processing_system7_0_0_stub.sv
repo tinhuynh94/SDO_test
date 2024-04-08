@@ -111,7 +111,7 @@ module design_1_processing_system7_0_0 (
   input bit [1 : 0] M_AXI_GP0_BRESP,
   input bit [1 : 0] M_AXI_GP0_RRESP,
   input bit [31 : 0] M_AXI_GP0_RDATA,
-  input bit [1 : 0] IRQ_F2P,
+  input bit [0 : 0] IRQ_F2P,
   output bit_as_bool FCLK_CLK0,
   output bit_as_bool FCLK_CLK1,
   output bit_as_bool FCLK_CLK2,
@@ -191,7 +191,7 @@ module design_1_processing_system7_0_0 (TTC0_WAVE0_OUT,TTC0_WAVE1_OUT,TTC0_WAVE2
   input bit [1 : 0] M_AXI_GP0_BRESP;
   input bit [1 : 0] M_AXI_GP0_RRESP;
   input bit [31 : 0] M_AXI_GP0_RDATA;
-  input bit [1 : 0] IRQ_F2P;
+  input bit [0 : 0] IRQ_F2P;
   output wire FCLK_CLK0;
   output wire FCLK_CLK1;
   output wire FCLK_CLK2;

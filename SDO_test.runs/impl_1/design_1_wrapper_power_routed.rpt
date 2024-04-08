@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date             : Fri Apr  5 15:25:49 2024
+| Date             : Mon Apr  8 15:05:45 2024
 | Host             : LAPTOP-4NG0TGNQ running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -52,15 +52,15 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.016 |        5 |       --- |             --- |
-| Slice Logic             |     0.008 |     9893 |       --- |             --- |
-|   LUT as Logic          |     0.007 |     3142 |     53200 |            5.91 |
-|   Register              |    <0.001 |     4662 |    106400 |            4.38 |
+| Clocks                  |     0.017 |        5 |       --- |             --- |
+| Slice Logic             |     0.008 |     9586 |       --- |             --- |
+|   LUT as Logic          |     0.007 |     3068 |     53200 |            5.77 |
+|   Register              |    <0.001 |     4504 |    106400 |            4.23 |
 |   CARRY4                |    <0.001 |      116 |     13300 |            0.87 |
 |   F7/F8 Muxes           |    <0.001 |      120 |     53200 |            0.23 |
 |   LUT as Shift Register |    <0.001 |      359 |     17400 |            2.06 |
-|   Others                |     0.000 |      467 |       --- |             --- |
-| Signals                 |     0.011 |     7104 |       --- |             --- |
+|   Others                |     0.000 |      459 |       --- |             --- |
+| Signals                 |     0.011 |     6835 |       --- |             --- |
 | I/O                     |     0.088 |       17 |       200 |            8.50 |
 | PS7                     |     1.529 |        1 |       --- |             --- |
 | Static Power            |     0.147 |          |           |                 |
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.050 |       0.035 |      0.016 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.051 |       0.035 |      0.016 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.016 |       0.000 |      0.016 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.036 |       0.035 |      0.001 |       NA    | Unspecified | NA         |
@@ -162,10 +162,9 @@ Table of Contents
 |       m00_couplers       |     0.003 |
 |       m01_couplers       |     0.003 |
 |       m02_couplers       |     0.004 |
-|       m03_couplers       |     0.003 |
-|       m06_couplers       |     0.003 |
+|       m03_couplers       |     0.004 |
+|       m06_couplers       |     0.004 |
 |       m07_couplers       |     0.004 |
-|       s00_mmu            |     0.002 |
 |       xbar               |     0.009 |
 |     util_ds_buf_0        |     0.043 |
 |       U0                 |     0.043 |

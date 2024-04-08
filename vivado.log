@@ -1,0 +1,142 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Mon Apr  8 14:57:20 2024
+# Process ID: 46952
+# Current directory: C:/Users/19165/Documents/Xilinx_Projects/SDO_test
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent46116 C:\Users\19165\Documents\Xilinx_Projects\SDO_test\SDO_test.xpr
+# Log file: C:/Users/19165/Documents/Xilinx_Projects/SDO_test/vivado.log
+# Journal file: C:/Users/19165/Documents/Xilinx_Projects/SDO_test\vivado.jou
+# Running On: LAPTOP-4NG0TGNQ, OS: Windows, CPU Frequency: 2496 MHz, CPU Physical cores: 10, Host memory: 12540 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.xpr
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory 'C:/Users/19165/digilent/vivado-library/ip'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/19165/Documents/Xilinx_Projects/ip_repo/LVDS_Tx_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/19165/Documents/Xilinx_Projects/ip_repo/ClockDivider_1_0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/19165/digilent/vivado-library/ip'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.2/data/ip'.
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'design_1.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+design_1_processing_system7_0_0
+
+open_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:20 . Memory (MB): peak = 1686.383 ; gain = 553.402
+open_bd_design {C:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.srcs/sources_1/bd/design_1/design_1.bd}
+Reading block design file <C:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.srcs/sources_1/bd/design_1/design_1.bd>...
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Adding component instance block -- CSS:user:ClockDivider:1.0 - ClockDivider_LVDS
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - util_ds_buf_0
+Adding component instance block -- CSS:user:LVDS_Tx:1.0 - LVDS_Tx_0
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - util_ds_buf_1
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - Misc_LVDS_GPIO
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - EN_CLK25_GPIO
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - QSPI_GPIO
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - LEV_SHIFT_GPIO
+Successfully read diagram <design_1> from block design file <C:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.srcs/sources_1/bd/design_1/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 2053.605 ; gain = 112.746
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:ip:processing_system7:5.5 [get_ips  design_1_processing_system7_0_0] -log ip_upgrade.log
+Upgrading 'C:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.srcs/sources_1/bd/design_1/design_1.bd'
+WARNING: [PS7-6] The applied preset does not match with zedboard board preset. You may not get expected settings for zedboard board. The ZedBoard preset is designed for ZedBoard board.
+INFO: [PS7-6] Configuring Board Preset part0. Please wait ......
+WARNING: [IP_Flow 19-4316] Parameter 'FREQ_HZ' is no longer present on the upgraded IP 'design_1_processing_system7_0_0', and cannot be set to '1e+07'
+INFO: [IP_Flow 19-3420] Updated design_1_processing_system7_0_0 to use current project options
+CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'design_1_processing_system7_0_0' has identified issues that may require user intervention. Please review the upgrade log 'c:/Users/19165/Documents/Xilinx_Projects/SDO_test/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
+Wrote  : <C:\Users\19165\Documents\Xilinx_Projects\SDO_test\SDO_test.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/19165/Documents/Xilinx_Projects/SDO_test/ip_upgrade.log'.
+upgrade_ip: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 2081.102 ; gain = 0.000
+export_ip_user_files -of_objects [get_ips design_1_processing_system7_0_0] -no_script -sync -force -quiet
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp with file C:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.runs/synth_1/design_1_wrapper.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+WARNING: [BD 41-2670] Found an incomplete address path from address space '/processing_system7_0/Data' to master interface '/ps7_0_axi_periph/M04_AXI'. Please either complete or remove this path to resolve.
+WARNING: [BD 41-2670] Found an incomplete address path from address space '/processing_system7_0/Data' to master interface '/ps7_0_axi_periph/M05_AXI'. Please either complete or remove this path to resolve.
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -addressables -of_objects /ps7_0_axi_periph/xbar/M04_AXI'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -addressables -of_objects /ps7_0_axi_periph/xbar/M05_AXI'
+INFO: [xilinx.com:ip:util_vector_logic:2.0-10] /util_vector_logic_0 IP set output pin Res type to "clk" when Input pin Op1 type is "clk" and Input pin Op2 type is "undef".
+Wrote  : <C:\Users\19165\Documents\Xilinx_Projects\SDO_test\SDO_test.srcs\sources_1\bd\design_1\design_1.bd> 
+Verilog Output written to : c:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.gen/sources_1/bd/design_1/synth/design_1.v
+Verilog Output written to : c:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.gen/sources_1/bd/design_1/sim/design_1.v
+Verilog Output written to : c:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.gen/sources_1/bd/design_1/ip/design_1_auto_pc_6/design_1_auto_pc_6_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/m00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.gen/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/m01_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.gen/sources_1/bd/design_1/ip/design_1_auto_pc_2/design_1_auto_pc_2_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/m02_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.gen/sources_1/bd/design_1/ip/design_1_auto_pc_3/design_1_auto_pc_3_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/m03_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.gen/sources_1/bd/design_1/ip/design_1_auto_pc_4/design_1_auto_pc_4_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/m06_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.gen/sources_1/bd/design_1/ip/design_1_auto_pc_5/design_1_auto_pc_5_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/m07_couplers/auto_pc .
+Exporting to file c:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Hardware Definition File c:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.gen/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_auto_pc_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_auto_pc_1
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_auto_pc_2
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_auto_pc_3
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_auto_pc_4
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_auto_pc_5
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_auto_pc_6
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_auto_pc_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_auto_pc_1
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_auto_pc_2
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_auto_pc_3
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_auto_pc_4
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_auto_pc_5
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_auto_pc_6
+[Mon Apr  8 15:00:02 2024] Launched design_1_processing_system7_0_0_synth_1, design_1_auto_pc_6_synth_1, design_1_auto_pc_0_synth_1, design_1_auto_pc_4_synth_1, design_1_auto_pc_1_synth_1, design_1_auto_pc_5_synth_1, design_1_auto_pc_2_synth_1, design_1_auto_pc_3_synth_1, synth_1...
+Run output will be captured here:
+design_1_processing_system7_0_0_synth_1: C:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.runs/design_1_processing_system7_0_0_synth_1/runme.log
+design_1_auto_pc_6_synth_1: C:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.runs/design_1_auto_pc_6_synth_1/runme.log
+design_1_auto_pc_0_synth_1: C:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.runs/design_1_auto_pc_0_synth_1/runme.log
+design_1_auto_pc_4_synth_1: C:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.runs/design_1_auto_pc_4_synth_1/runme.log
+design_1_auto_pc_1_synth_1: C:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.runs/design_1_auto_pc_1_synth_1/runme.log
+design_1_auto_pc_5_synth_1: C:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.runs/design_1_auto_pc_5_synth_1/runme.log
+design_1_auto_pc_2_synth_1: C:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.runs/design_1_auto_pc_2_synth_1/runme.log
+design_1_auto_pc_3_synth_1: C:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.runs/design_1_auto_pc_3_synth_1/runme.log
+synth_1: C:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.runs/synth_1/runme.log
+[Mon Apr  8 15:00:03 2024] Launched impl_1...
+Run output will be captured here: C:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:09 ; elapsed = 00:00:57 . Memory (MB): peak = 2237.914 ; gain = 156.812
+write_hw_platform -fixed -include_bit -force -file C:/Users/19165/Documents/Xilinx_Projects/SDO_test/sdo_test_wrapper.xsa
+INFO: [Project 1-1918] Creating Hardware Platform: C:/Users/19165/Documents/Xilinx_Projects/SDO_test/sdo_test_wrapper.xsa ...
+INFO: [Project 1-1943] The Hardware Platform can be used for Hardware
+INFO: [Project 1-1941] Successfully created Hardware Platform: C:/Users/19165/Documents/Xilinx_Projects/SDO_test/sdo_test_wrapper.xsa
+INFO: [Hsi 55-2053] elapsed time for repository (C:/Xilinx/Vivado/2023.2/data/embeddedsw) loading 2 seconds
+write_hw_platform: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 2403.516 ; gain = 165.602

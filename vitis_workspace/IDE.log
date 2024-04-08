@@ -1684,3 +1684,441 @@ con
 19:17:46 INFO  : Successfully done query RDI_DATADIR 
 19:17:47 INFO  : Registering command handlers for Vitis TCF services
 19:17:47 INFO  : Platform repository initialization has completed.
+11:48:54 WARN  : An unexpected exception occurred in the module 'platform project logging'
+11:51:47 INFO  : Result from executing command 'getProjects': sdo_test_wrapper
+11:51:47 INFO  : Result from executing command 'getPlatforms': xilinx_vck190_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vck190_base_202320_1/xilinx_vck190_base_202320_1.xpfm;xilinx_vck190_base_dfx_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vck190_base_dfx_202320_1/xilinx_vck190_base_dfx_202320_1.xpfm;xilinx_vek280_es1_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vek280_es1_base_202320_1/xilinx_vek280_es1_base_202320_1.xpfm;xilinx_vmk180_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vmk180_base_202320_1/xilinx_vmk180_base_202320_1.xpfm;xilinx_zcu102_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_zcu102_base_202320_1/xilinx_zcu102_base_202320_1.xpfm;xilinx_zcu102_base_dfx_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_zcu102_base_dfx_202320_1/xilinx_zcu102_base_dfx_202320_1.xpfm;xilinx_zcu104_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_zcu104_base_202320_1/xilinx_zcu104_base_202320_1.xpfm
+11:51:49 WARN  : An unexpected exception occurred in the module 'platform project logging'
+11:51:50 INFO  : Platform 'sdo_test_wrapper' is added to custom repositories.
+11:52:03 INFO  : Platform 'sdo_test_wrapper' is added to custom repositories.
+11:53:37 INFO  : Checking for BSP changes to sync application flags for project 'sdo_test_app'...
+11:53:37 INFO  : Result from executing command 'getProjects': RemoteSystemsTempFiles;sdo_test_app;sdo_test_app_system;sdo_test_wrapper
+11:53:37 WARN  : Failed to closehw "C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_wrapper/export/sdo_test_wrapper/hw/sdo_test_wrapper.xsa"
+Reason: C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_wrapper/export/sdo_test_wrapper/hw/sdo_test_wrapper.xsa is not available in the current workspace
+use 'getprojects' command to see list of available projects in current workspace
+11:53:37 INFO  : Result from executing command 'getProjects': RemoteSystemsTempFiles;sdo_test_app;sdo_test_app_system;sdo_test_wrapper
+11:53:37 ERROR : Failed to openhw "C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_wrapper/export/sdo_test_wrapper/hw/sdo_test_wrapper.xsa"
+Reason: C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_wrapper/export/sdo_test_wrapper/hw/sdo_test_wrapper.xsa is not available in the current workspace
+use 'getprojects' command to see list of available projects in current workspace
+11:53:37 ERROR : Failed to update application flags from BSP for 'sdo_test_app'. Reason: null
+java.lang.NullPointerException: null
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.<init>(SDxSwPlatform.java:305) ~[com.xilinx.sdx.sw_1.0.0.202310091710.jar:?]
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.create(SDxSwPlatform.java:214) ~[com.xilinx.sdx.sw_1.0.0.202310091710.jar:?]
+	at com.xilinx.sdx.sdk.core.util.SdkPlatformHelper.getSwPlatform(SdkPlatformHelper.java:64) ~[com.xilinx.sdx.sdk.core_1.0.0.202310091710.jar:?]
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.getSwPlatform(SdkMakefileGenerationListener.java:160) ~[com.xilinx.sdx.sdk.core_1.0.0.202310091710.jar:?]
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:78) [com.xilinx.sdx.sdk.core_1.0.0.202310091710.jar:?]
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48) [com.xilinx.sdx.sdk.core_1.0.0.202310091710.jar:?]
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91) [com.xilinx.sdk.managedbuilder_1.0.0.202310091710.jar:?]
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.regenerateMakefiles(XilinxGnuMakefileGenerator.java:75) [com.xilinx.sdk.managedbuilder_1.0.0.202310091710.jar:?]
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1006) [org.eclipse.cdt.managedbuilder.core_8.6.0.201802261533.jar:?]
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873) [org.eclipse.cdt.managedbuilder.core_8.6.0.201802261533.jar:?]
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748) [org.eclipse.cdt.managedbuilder.core_8.6.0.201802261533.jar:?]
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:513) [org.eclipse.cdt.managedbuilder.core_8.6.0.201802261533.jar:?]
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459) [org.eclipse.cdt.managedbuilder.core_8.6.0.201802261533.jar:?]
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:832) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) [org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:?]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:316) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) [org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:?]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:319) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:371) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:392) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:515) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:412) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:291) [org.eclipse.ui.ide_3.17.0.v20200217-1511.jar:?]
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) [org.eclipse.core.jobs_3.10.700.v20200106-1020.jar:?]
+11:54:18 INFO  : Result from executing command 'getProjects': sdo_test_wrapper
+11:54:18 INFO  : Result from executing command 'getPlatforms': sdo_test_wrapper|C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_wrapper/export/sdo_test_wrapper/sdo_test_wrapper.xpfm;xilinx_vck190_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vck190_base_202320_1/xilinx_vck190_base_202320_1.xpfm;xilinx_vck190_base_dfx_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vck190_base_dfx_202320_1/xilinx_vck190_base_dfx_202320_1.xpfm;xilinx_vek280_es1_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vek280_es1_base_202320_1/xilinx_vek280_es1_base_202320_1.xpfm;xilinx_vmk180_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vmk180_base_202320_1/xilinx_vmk180_base_202320_1.xpfm;xilinx_zcu102_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_zcu102_base_202320_1/xilinx_zcu102_base_202320_1.xpfm;xilinx_zcu102_base_dfx_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_zcu102_base_dfx_202320_1/xilinx_zcu102_base_dfx_202320_1.xpfm;xilinx_zcu104_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_zcu104_base_202320_1/xilinx_zcu104_base_202320_1.xpfm
+11:54:19 INFO  : Checking for BSP changes to sync application flags for project 'sdo_test_app'...
+12:07:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:07:41 INFO  : Jtag cable 'Digilent Zed 210248AA59A3' is selected.
+12:07:41 INFO  : 'jtag frequency' command is executed.
+12:07:41 INFO  : Context for 'APU' is selected.
+12:07:41 INFO  : System reset is completed.
+12:07:44 INFO  : 'after 3000' command is executed.
+12:07:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248AA59A3" && level==0 && jtag_device_ctx=="jsn-Zed-210248AA59A3-23727093-0"}' command is executed.
+12:07:48 INFO  : Device configured successfully with "C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_app/_ide/bitstream/sdo_test_wrapper.bit"
+12:07:48 INFO  : Context for 'APU' is selected.
+12:07:48 INFO  : Hardware design and registers information is loaded from 'C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_wrapper/export/sdo_test_wrapper/hw/sdo_test_wrapper.xsa'.
+12:07:48 INFO  : 'configparams force-mem-access 1' command is executed.
+12:07:48 INFO  : Context for 'APU' is selected.
+12:07:49 INFO  : Sourcing of 'C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_app/_ide/psinit/ps7_init.tcl' is done.
+12:07:49 INFO  : 'ps7_init' command is executed.
+12:07:49 INFO  : 'ps7_post_config' command is executed.
+12:07:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:07:50 INFO  : The application 'C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_app/Debug/sdo_test_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:07:50 INFO  : 'configparams force-mem-access 0' command is executed.
+12:07:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248AA59A3" && level==0 && jtag_device_ctx=="jsn-Zed-210248AA59A3-23727093-0"}
+fpga -file C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_app/_ide/bitstream/sdo_test_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_wrapper/export/sdo_test_wrapper/hw/sdo_test_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_app/Debug/sdo_test_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:07:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:07:50 INFO  : 'con' command is executed.
+12:07:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:07:50 INFO  : Launch script is exported to file 'C:\Users\19165\Documents\Xilinx_Projects\SDO_LVDS\vitis_workspace\sdo_test_app_system\_ide\scripts\systemdebugger_sdo_test_app_system_standalone.tcl'
+12:33:31 INFO  : Disconnected from the channel tcfchan#3.
+12:34:29 INFO  : Result from executing command 'getProjects': sdo_test_wrapper
+12:34:29 INFO  : Result from executing command 'getPlatforms': xilinx_vck190_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vck190_base_202320_1/xilinx_vck190_base_202320_1.xpfm;xilinx_vck190_base_dfx_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vck190_base_dfx_202320_1/xilinx_vck190_base_dfx_202320_1.xpfm;xilinx_vek280_es1_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vek280_es1_base_202320_1/xilinx_vek280_es1_base_202320_1.xpfm;xilinx_vmk180_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vmk180_base_202320_1/xilinx_vmk180_base_202320_1.xpfm;xilinx_zcu102_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_zcu102_base_202320_1/xilinx_zcu102_base_202320_1.xpfm;xilinx_zcu102_base_dfx_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_zcu102_base_dfx_202320_1/xilinx_zcu102_base_dfx_202320_1.xpfm;xilinx_zcu104_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_zcu104_base_202320_1/xilinx_zcu104_base_202320_1.xpfm
+12:34:31 INFO  : Platform 'sdo_test_wrapper' is added to custom repositories.
+12:34:41 INFO  : Platform 'sdo_test_wrapper' is added to custom repositories.
+12:45:21 DEBUG : Logs will be stored at 'C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/IDE.log'.
+12:45:22 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\19165\Documents\Xilinx_Projects\SDO_LVDS\vitis_workspace\temp_xsdb_launch_script.tcl
+12:45:24 INFO  : XSCT server has started successfully.
+12:45:24 INFO  : Successfully done setting XSCT server connection channel  
+12:45:24 INFO  : plnx-install-location is set to ''
+12:45:24 INFO  : Successfully done setting workspace for the tool. 
+12:45:26 INFO  : Registering command handlers for Vitis TCF services
+12:45:27 INFO  : Platform repository initialization has completed.
+12:45:29 INFO  : Successfully done query RDI_DATADIR 
+12:46:40 WARN  : An unexpected exception occurred in the module 'platform project logging'
+12:47:31 INFO  : Result from executing command 'getProjects': sdo_test_wrapper
+12:47:31 INFO  : Result from executing command 'getPlatforms': xilinx_vck190_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vck190_base_202320_1/xilinx_vck190_base_202320_1.xpfm;xilinx_vck190_base_dfx_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vck190_base_dfx_202320_1/xilinx_vck190_base_dfx_202320_1.xpfm;xilinx_vek280_es1_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vek280_es1_base_202320_1/xilinx_vek280_es1_base_202320_1.xpfm;xilinx_vmk180_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vmk180_base_202320_1/xilinx_vmk180_base_202320_1.xpfm;xilinx_zcu102_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_zcu102_base_202320_1/xilinx_zcu102_base_202320_1.xpfm;xilinx_zcu102_base_dfx_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_zcu102_base_dfx_202320_1/xilinx_zcu102_base_dfx_202320_1.xpfm;xilinx_zcu104_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_zcu104_base_202320_1/xilinx_zcu104_base_202320_1.xpfm
+12:47:32 WARN  : An unexpected exception occurred in the module 'platform project logging'
+12:47:33 INFO  : Platform 'sdo_test_wrapper' is added to custom repositories.
+12:47:43 INFO  : Platform 'sdo_test_wrapper' is added to custom repositories.
+12:49:30 INFO  : Result from executing command 'getProjects': sdo_test_wrapper
+12:49:30 INFO  : Result from executing command 'getPlatforms': sdo_test_wrapper|C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_wrapper/export/sdo_test_wrapper/sdo_test_wrapper.xpfm;xilinx_vck190_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vck190_base_202320_1/xilinx_vck190_base_202320_1.xpfm;xilinx_vck190_base_dfx_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vck190_base_dfx_202320_1/xilinx_vck190_base_dfx_202320_1.xpfm;xilinx_vek280_es1_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vek280_es1_base_202320_1/xilinx_vek280_es1_base_202320_1.xpfm;xilinx_vmk180_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vmk180_base_202320_1/xilinx_vmk180_base_202320_1.xpfm;xilinx_zcu102_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_zcu102_base_202320_1/xilinx_zcu102_base_202320_1.xpfm;xilinx_zcu102_base_dfx_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_zcu102_base_dfx_202320_1/xilinx_zcu102_base_dfx_202320_1.xpfm;xilinx_zcu104_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_zcu104_base_202320_1/xilinx_zcu104_base_202320_1.xpfm
+12:49:32 INFO  : Checking for BSP changes to sync application flags for project 'sdo_test_app'...
+13:14:05 INFO  : Result from executing command 'getProjects': sdo_test_wrapper
+13:14:05 INFO  : Result from executing command 'getPlatforms': xilinx_vck190_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vck190_base_202320_1/xilinx_vck190_base_202320_1.xpfm;xilinx_vck190_base_dfx_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vck190_base_dfx_202320_1/xilinx_vck190_base_dfx_202320_1.xpfm;xilinx_vek280_es1_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vek280_es1_base_202320_1/xilinx_vek280_es1_base_202320_1.xpfm;xilinx_vmk180_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vmk180_base_202320_1/xilinx_vmk180_base_202320_1.xpfm;xilinx_zcu102_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_zcu102_base_202320_1/xilinx_zcu102_base_202320_1.xpfm;xilinx_zcu102_base_dfx_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_zcu102_base_dfx_202320_1/xilinx_zcu102_base_dfx_202320_1.xpfm;xilinx_zcu104_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_zcu104_base_202320_1/xilinx_zcu104_base_202320_1.xpfm
+13:14:08 INFO  : Platform 'sdo_test_wrapper' is added to custom repositories.
+13:14:12 ERROR : 
+java.lang.NullPointerException: null
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:761) ~[?:?]
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1177) ~[?:?]
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54) ~[?:?]
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46) ~[?:?]
+	at com.xilinx.sdx.sdk.core.gen.ManagedAppCreator.updateSwBuildOptions(ManagedAppCreator.java:82) ~[?:?]
+	at com.xilinx.sdx.sdk.core.gen.ManagedAppCreator.create(ManagedAppCreator.java:54) ~[?:?]
+	at com.xilinx.sdx.sdk.core.gen.StandaloneProjectHandler.createCoreApp(StandaloneProjectHandler.java:79) ~[?:?]
+	at com.xilinx.sdx.sdk.core.gen.AppCreationHandler.createApplication(AppCreationHandler.java:79) ~[?:?]
+	at com.xilinx.sdx.sdk.core.gen.AppCreationHandler.execute(AppCreationHandler.java:69) ~[?:?]
+	at com.xilinx.sdx.sdk.core.SdkAppCreationHandler.executeInternal(SdkAppCreationHandler.java:75) ~[?:?]
+	at com.xilinx.sdx.sdk.core.SdkAppCreationHandler.lambda$1(SdkAppCreationHandler.java:67) ~[?:?]
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292) ~[org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2312) ~[org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at com.xilinx.sdx.sdk.core.SdkAppCreationHandler.execute(SdkAppCreationHandler.java:66) ~[?:?]
+	at com.xilinx.sdx.npw.NewProjectCreationHandler.createApplicationProject(NewProjectCreationHandler.java:237) ~[?:?]
+	at com.xilinx.sdx.npw.NewProjectCreationHandler.internalExecute(NewProjectCreationHandler.java:385) ~[?:?]
+	at com.xilinx.sdx.npw.NewProjectCreationHandler$1.execute(NewProjectCreationHandler.java:100) ~[?:?]
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.lambda$0(WorkspaceModifyOperation.java:110) ~[?:?]
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:131) [org.eclipse.ui.ide_3.17.0.v20200217-1511.jar:?]
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122) [org.eclipse.jface_3.19.0.v20200218-1607.jar:?]
+13:14:12 ERROR : Failed to create application project
+org.eclipse.core.runtime.CoreException: Unexpected error occurred. Please check log for further details.
+	at com.xilinx.sdx.sdk.core.gen.StandaloneProjectHandler.createCoreApp(StandaloneProjectHandler.java:150) ~[?:?]
+	at com.xilinx.sdx.sdk.core.gen.AppCreationHandler.createApplication(AppCreationHandler.java:79) ~[?:?]
+	at com.xilinx.sdx.sdk.core.gen.AppCreationHandler.execute(AppCreationHandler.java:69) ~[?:?]
+	at com.xilinx.sdx.sdk.core.SdkAppCreationHandler.executeInternal(SdkAppCreationHandler.java:75) ~[?:?]
+	at com.xilinx.sdx.sdk.core.SdkAppCreationHandler.lambda$1(SdkAppCreationHandler.java:67) ~[?:?]
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292) ~[org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2312) ~[org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at com.xilinx.sdx.sdk.core.SdkAppCreationHandler.execute(SdkAppCreationHandler.java:66) ~[?:?]
+	at com.xilinx.sdx.npw.NewProjectCreationHandler.createApplicationProject(NewProjectCreationHandler.java:237) ~[?:?]
+	at com.xilinx.sdx.npw.NewProjectCreationHandler.internalExecute(NewProjectCreationHandler.java:385) ~[?:?]
+	at com.xilinx.sdx.npw.NewProjectCreationHandler$1.execute(NewProjectCreationHandler.java:100) ~[?:?]
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.lambda$0(WorkspaceModifyOperation.java:110) ~[?:?]
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:131) [org.eclipse.ui.ide_3.17.0.v20200217-1511.jar:?]
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122) [org.eclipse.jface_3.19.0.v20200218-1607.jar:?]
+13:18:48 DEBUG : Logs will be stored at 'C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/IDE.log'.
+13:18:50 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\19165\Documents\Xilinx_Projects\SDO_LVDS\vitis_workspace\temp_xsdb_launch_script.tcl
+13:18:51 INFO  : Registering command handlers for Vitis TCF services
+13:18:51 INFO  : Platform repository initialization has completed.
+13:18:53 INFO  : XSCT server has started successfully.
+13:18:53 INFO  : plnx-install-location is set to ''
+13:18:53 INFO  : Successfully done setting XSCT server connection channel  
+13:18:58 INFO  : Successfully done setting workspace for the tool. 
+13:18:58 INFO  : Successfully done query RDI_DATADIR 
+13:21:47 INFO  : Result from executing command 'getProjects': sdo_test_wrapper
+13:21:47 INFO  : Result from executing command 'getPlatforms': xilinx_vck190_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vck190_base_202320_1/xilinx_vck190_base_202320_1.xpfm;xilinx_vck190_base_dfx_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vck190_base_dfx_202320_1/xilinx_vck190_base_dfx_202320_1.xpfm;xilinx_vek280_es1_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vek280_es1_base_202320_1/xilinx_vek280_es1_base_202320_1.xpfm;xilinx_vmk180_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vmk180_base_202320_1/xilinx_vmk180_base_202320_1.xpfm;xilinx_zcu102_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_zcu102_base_202320_1/xilinx_zcu102_base_202320_1.xpfm;xilinx_zcu102_base_dfx_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_zcu102_base_dfx_202320_1/xilinx_zcu102_base_dfx_202320_1.xpfm;xilinx_zcu104_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_zcu104_base_202320_1/xilinx_zcu104_base_202320_1.xpfm
+13:21:48 WARN  : An unexpected exception occurred in the module 'platform project logging'
+13:21:49 INFO  : Platform 'sdo_test_wrapper' is added to custom repositories.
+13:21:58 INFO  : Platform 'sdo_test_wrapper' is added to custom repositories.
+13:23:41 INFO  : Result from executing command 'getProjects': sdo_test_wrapper
+13:23:41 INFO  : Result from executing command 'getPlatforms': sdo_test_wrapper|C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_wrapper/export/sdo_test_wrapper/sdo_test_wrapper.xpfm;xilinx_vck190_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vck190_base_202320_1/xilinx_vck190_base_202320_1.xpfm;xilinx_vck190_base_dfx_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vck190_base_dfx_202320_1/xilinx_vck190_base_dfx_202320_1.xpfm;xilinx_vek280_es1_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vek280_es1_base_202320_1/xilinx_vek280_es1_base_202320_1.xpfm;xilinx_vmk180_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vmk180_base_202320_1/xilinx_vmk180_base_202320_1.xpfm;xilinx_zcu102_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_zcu102_base_202320_1/xilinx_zcu102_base_202320_1.xpfm;xilinx_zcu102_base_dfx_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_zcu102_base_dfx_202320_1/xilinx_zcu102_base_dfx_202320_1.xpfm;xilinx_zcu104_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_zcu104_base_202320_1/xilinx_zcu104_base_202320_1.xpfm
+13:23:43 INFO  : Checking for BSP changes to sync application flags for project 'sdo_test_app'...
+13:27:27 INFO  : Checking for BSP changes to sync application flags for project 'sdo_test_app'...
+13:38:38 INFO  : Checking for BSP changes to sync application flags for project 'sdo_test_app'...
+13:42:05 INFO  : Checking for BSP changes to sync application flags for project 'sdo_test_app'...
+13:42:34 INFO  : Checking for BSP changes to sync application flags for project 'sdo_test_app'...
+13:42:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:42:50 INFO  : Jtag cable 'Digilent Zed 210248AA59A3' is selected.
+13:42:50 INFO  : 'jtag frequency' command is executed.
+13:42:50 INFO  : Context for 'APU' is selected.
+13:42:50 INFO  : System reset is completed.
+13:42:53 INFO  : 'after 3000' command is executed.
+13:42:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248AA59A3" && level==0 && jtag_device_ctx=="jsn-Zed-210248AA59A3-23727093-0"}' command is executed.
+13:42:57 INFO  : Device configured successfully with "C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_app/_ide/bitstream/sdo_test_wrapper.bit"
+13:42:57 INFO  : Context for 'APU' is selected.
+13:42:57 INFO  : Hardware design and registers information is loaded from 'C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_wrapper/export/sdo_test_wrapper/hw/sdo_test_wrapper.xsa'.
+13:42:57 INFO  : 'configparams force-mem-access 1' command is executed.
+13:42:57 INFO  : Context for 'APU' is selected.
+13:42:57 INFO  : Sourcing of 'C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_app/_ide/psinit/ps7_init.tcl' is done.
+13:42:58 INFO  : 'ps7_init' command is executed.
+13:42:58 INFO  : 'ps7_post_config' command is executed.
+13:42:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:42:59 INFO  : The application 'C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_app/Debug/sdo_test_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:42:59 INFO  : 'configparams force-mem-access 0' command is executed.
+13:42:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248AA59A3" && level==0 && jtag_device_ctx=="jsn-Zed-210248AA59A3-23727093-0"}
+fpga -file C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_app/_ide/bitstream/sdo_test_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_wrapper/export/sdo_test_wrapper/hw/sdo_test_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_app/Debug/sdo_test_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:42:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:42:59 INFO  : 'con' command is executed.
+13:42:59 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+13:42:59 INFO  : Launch script is exported to file 'C:\Users\19165\Documents\Xilinx_Projects\SDO_LVDS\vitis_workspace\sdo_test_app_system\_ide\scripts\systemdebugger_sdo_test_app_system_standalone.tcl'
+13:46:36 INFO  : Checking for BSP changes to sync application flags for project 'sdo_test_app'...
+13:46:40 INFO  : Disconnected from the channel tcfchan#2.
+13:46:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:46:41 INFO  : Jtag cable 'Digilent Zed 210248AA59A3' is selected.
+13:46:41 INFO  : 'jtag frequency' command is executed.
+13:46:41 INFO  : Context for 'APU' is selected.
+13:46:41 INFO  : System reset is completed.
+13:46:44 INFO  : 'after 3000' command is executed.
+13:46:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248AA59A3" && level==0 && jtag_device_ctx=="jsn-Zed-210248AA59A3-23727093-0"}' command is executed.
+13:46:48 INFO  : Device configured successfully with "C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_app/_ide/bitstream/sdo_test_wrapper.bit"
+13:46:48 INFO  : Context for 'APU' is selected.
+13:46:48 INFO  : Hardware design and registers information is loaded from 'C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_wrapper/export/sdo_test_wrapper/hw/sdo_test_wrapper.xsa'.
+13:46:48 INFO  : 'configparams force-mem-access 1' command is executed.
+13:46:48 INFO  : Context for 'APU' is selected.
+13:46:48 INFO  : Sourcing of 'C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_app/_ide/psinit/ps7_init.tcl' is done.
+13:46:49 INFO  : 'ps7_init' command is executed.
+13:46:49 INFO  : 'ps7_post_config' command is executed.
+13:46:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:46:49 INFO  : The application 'C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_app/Debug/sdo_test_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:46:49 INFO  : 'configparams force-mem-access 0' command is executed.
+13:46:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248AA59A3" && level==0 && jtag_device_ctx=="jsn-Zed-210248AA59A3-23727093-0"}
+fpga -file C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_app/_ide/bitstream/sdo_test_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_wrapper/export/sdo_test_wrapper/hw/sdo_test_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_app/Debug/sdo_test_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:46:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:46:50 INFO  : 'con' command is executed.
+13:46:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+13:46:50 INFO  : Launch script is exported to file 'C:\Users\19165\Documents\Xilinx_Projects\SDO_LVDS\vitis_workspace\sdo_test_app_system\_ide\scripts\systemdebugger_sdo_test_app_system_standalone.tcl'
+14:12:31 INFO  : Disconnected from the channel tcfchan#3.
+14:12:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:12:31 INFO  : Jtag cable 'Digilent Zed 210248AA59A3' is selected.
+14:12:31 INFO  : 'jtag frequency' command is executed.
+14:12:31 INFO  : Context for 'APU' is selected.
+14:12:31 INFO  : System reset is completed.
+14:12:34 INFO  : 'after 3000' command is executed.
+14:12:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248AA59A3" && level==0 && jtag_device_ctx=="jsn-Zed-210248AA59A3-23727093-0"}' command is executed.
+14:12:38 INFO  : Device configured successfully with "C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_app/_ide/bitstream/sdo_test_wrapper.bit"
+14:12:38 INFO  : Context for 'APU' is selected.
+14:12:38 INFO  : Hardware design and registers information is loaded from 'C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_wrapper/export/sdo_test_wrapper/hw/sdo_test_wrapper.xsa'.
+14:12:38 INFO  : 'configparams force-mem-access 1' command is executed.
+14:12:38 INFO  : Context for 'APU' is selected.
+14:12:38 INFO  : Sourcing of 'C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_app/_ide/psinit/ps7_init.tcl' is done.
+14:12:39 INFO  : 'ps7_init' command is executed.
+14:12:39 INFO  : 'ps7_post_config' command is executed.
+14:12:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:12:40 INFO  : The application 'C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_app/Debug/sdo_test_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:12:40 INFO  : 'configparams force-mem-access 0' command is executed.
+14:12:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248AA59A3" && level==0 && jtag_device_ctx=="jsn-Zed-210248AA59A3-23727093-0"}
+fpga -file C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_app/_ide/bitstream/sdo_test_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_wrapper/export/sdo_test_wrapper/hw/sdo_test_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_app/Debug/sdo_test_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:12:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:12:40 INFO  : 'con' command is executed.
+14:12:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:12:40 INFO  : Launch script is exported to file 'C:\Users\19165\Documents\Xilinx_Projects\SDO_LVDS\vitis_workspace\sdo_test_app_system\_ide\scripts\systemdebugger_sdo_test_app_system_standalone.tcl'
+14:42:32 INFO  : Checking for BSP changes to sync application flags for project 'sdo_test_app'...
+14:42:36 INFO  : Disconnected from the channel tcfchan#4.
+14:42:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:42:36 INFO  : Jtag cable 'Digilent Zed 210248AA59A3' is selected.
+14:42:36 INFO  : 'jtag frequency' command is executed.
+14:42:36 INFO  : Context for 'APU' is selected.
+14:42:36 INFO  : System reset is completed.
+14:42:39 INFO  : 'after 3000' command is executed.
+14:42:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248AA59A3" && level==0 && jtag_device_ctx=="jsn-Zed-210248AA59A3-23727093-0"}' command is executed.
+14:42:43 INFO  : Device configured successfully with "C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_app/_ide/bitstream/sdo_test_wrapper.bit"
+14:42:43 INFO  : Context for 'APU' is selected.
+14:42:44 INFO  : Hardware design and registers information is loaded from 'C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_wrapper/export/sdo_test_wrapper/hw/sdo_test_wrapper.xsa'.
+14:42:44 INFO  : 'configparams force-mem-access 1' command is executed.
+14:42:44 INFO  : Context for 'APU' is selected.
+14:42:44 INFO  : Sourcing of 'C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_app/_ide/psinit/ps7_init.tcl' is done.
+14:42:44 INFO  : 'ps7_init' command is executed.
+14:42:44 INFO  : 'ps7_post_config' command is executed.
+14:42:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:42:45 INFO  : The application 'C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_app/Debug/sdo_test_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:42:45 INFO  : 'configparams force-mem-access 0' command is executed.
+14:42:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248AA59A3" && level==0 && jtag_device_ctx=="jsn-Zed-210248AA59A3-23727093-0"}
+fpga -file C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_app/_ide/bitstream/sdo_test_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_wrapper/export/sdo_test_wrapper/hw/sdo_test_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_app/Debug/sdo_test_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:42:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:42:45 INFO  : 'con' command is executed.
+14:42:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:42:45 INFO  : Launch script is exported to file 'C:\Users\19165\Documents\Xilinx_Projects\SDO_LVDS\vitis_workspace\sdo_test_app_system\_ide\scripts\systemdebugger_sdo_test_app_system_standalone.tcl'
+14:55:19 INFO  : Disconnected from the channel tcfchan#5.
+15:09:06 DEBUG : Logs will be stored at 'C:/Users/19165/Documents/Xilinx_Projects/SDO_test/vitis_workspace/IDE.log'.
+15:09:06 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\19165\Documents\Xilinx_Projects\SDO_test\vitis_workspace\temp_xsdb_launch_script.tcl
+15:09:10 INFO  : Registering command handlers for Vitis TCF services
+15:09:10 INFO  : XSCT server has started successfully.
+15:09:10 INFO  : Platform repository initialization has completed.
+15:09:13 INFO  : Successfully done setting XSCT server connection channel  
+15:09:13 INFO  : plnx-install-location is set to ''
+15:09:13 INFO  : Successfully done query RDI_DATADIR 
+15:09:13 INFO  : Successfully done setting workspace for the tool. 
+15:09:17 INFO  : Checking for BSP changes to sync application flags for project 'sdo_test_app'...
+15:12:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:12:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+15:12:44 ERROR : Could not find ARM device on the board for connection 'Local'.
+Check if the target is in:
+1. Split JTAG - No operations are possible with ARM DAP.
+2. Non JTAG bootmode - Bootrom may need time to enable DAP.
+Please try again.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+15:12:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:12:54 INFO  : Jtag cable 'Digilent Zed 210248AA59A3' is selected.
+15:12:54 INFO  : 'jtag frequency' command is executed.
+15:12:54 INFO  : Context for 'APU' is selected.
+15:12:54 INFO  : System reset is completed.
+15:12:57 INFO  : 'after 3000' command is executed.
+15:12:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248AA59A3" && level==0 && jtag_device_ctx=="jsn-Zed-210248AA59A3-23727093-0"}' command is executed.
+15:13:01 INFO  : Device configured successfully with "C:/Users/19165/Documents/Xilinx_Projects/SDO_test/vitis_workspace/sdo_test_app/_ide/bitstream/sdo_test_wrapper.bit"
+15:13:01 INFO  : Context for 'APU' is selected.
+15:13:01 INFO  : Hardware design and registers information is loaded from 'C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_wrapper/export/sdo_test_wrapper/hw/sdo_test_wrapper.xsa'.
+15:13:01 INFO  : 'configparams force-mem-access 1' command is executed.
+15:13:01 INFO  : Context for 'APU' is selected.
+15:13:01 INFO  : Sourcing of 'C:/Users/19165/Documents/Xilinx_Projects/SDO_test/vitis_workspace/sdo_test_app/_ide/psinit/ps7_init.tcl' is done.
+15:13:02 INFO  : 'ps7_init' command is executed.
+15:13:02 INFO  : 'ps7_post_config' command is executed.
+15:13:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:13:03 INFO  : The application 'C:/Users/19165/Documents/Xilinx_Projects/SDO_test/vitis_workspace/sdo_test_app/Debug/sdo_test_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:13:03 INFO  : 'configparams force-mem-access 0' command is executed.
+15:13:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248AA59A3" && level==0 && jtag_device_ctx=="jsn-Zed-210248AA59A3-23727093-0"}
+fpga -file C:/Users/19165/Documents/Xilinx_Projects/SDO_test/vitis_workspace/sdo_test_app/_ide/bitstream/sdo_test_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/vitis_workspace/sdo_test_wrapper/export/sdo_test_wrapper/hw/sdo_test_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/19165/Documents/Xilinx_Projects/SDO_test/vitis_workspace/sdo_test_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/19165/Documents/Xilinx_Projects/SDO_test/vitis_workspace/sdo_test_app/Debug/sdo_test_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:13:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:13:03 INFO  : 'con' command is executed.
+15:13:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:13:03 INFO  : Launch script is exported to file 'C:\Users\19165\Documents\Xilinx_Projects\SDO_test\vitis_workspace\sdo_test_app_system\_ide\scripts\systemdebugger_sdo_test_app_system_standalone.tcl'

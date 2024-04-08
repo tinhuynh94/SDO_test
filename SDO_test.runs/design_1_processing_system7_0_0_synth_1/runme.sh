@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/SDO_LVDS.runs/design_1_processing_system7_0_0_synth_1'
+HD_PWD='C:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.runs/design_1_processing_system7_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -173,7 +173,7 @@ input [11 : 0] M_AXI_GP0_RID;
 input [1 : 0] M_AXI_GP0_BRESP;
 input [1 : 0] M_AXI_GP0_RRESP;
 input [31 : 0] M_AXI_GP0_RDATA;
-input [1 : 0] IRQ_F2P;
+input [0 : 0] IRQ_F2P;
 output FCLK_CLK0;
 output FCLK_CLK1;
 output FCLK_CLK2;

@@ -2,11 +2,11 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
--- Date        : Wed Mar 27 13:52:39 2024
+-- Date        : Mon Apr  8 15:01:43 2024
 -- Host        : LAPTOP-4NG0TGNQ running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub -rename_top design_1_auto_pc_6 -prefix
---               design_1_auto_pc_6_ design_1_auto_pc_3_stub.vhdl
--- Design      : design_1_auto_pc_3
+-- Command     : write_vhdl -force -mode synth_stub
+--               c:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.gen/sources_1/bd/design_1/ip/design_1_auto_pc_6/design_1_auto_pc_6_stub.vhdl
+-- Design      : design_1_auto_pc_6
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg484-1
 -- --------------------------------------------------------------------------------

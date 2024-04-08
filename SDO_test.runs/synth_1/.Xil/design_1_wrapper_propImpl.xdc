@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/SDO_LVDS.srcs/constrs_1/new/my_constraints.xdc rfile:../../../SDO_LVDS.srcs/constrs_1/new/my_constraints.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.srcs/constrs_1/new/my_constraints.xdc rfile:../../../SDO_test.srcs/constrs_1/new/my_constraints.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN F22 [get_ports {sws_8bits_tri_i[0]}]
 set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]

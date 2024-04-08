@@ -171,10 +171,12 @@ u16 numUartBytesReceived;
 
 //----------------------------------------
 // bit masks
-#define LVDS_VPROG_MASK                BIT_0
-#define LVDS_RESET_MASK                BIT_1
-#define LVDS_BUSY_MASK                 BIT_2
-#define LVDS_DTB_MASK                  BIT_3
+#define VPROG_MASK				BIT_0
+#define RESET_MASK				BIT_1
+#define BUSY_MASK				BIT_2
+#define DTB_MASK				BIT_3
+#define LEV_SHIFT_MASK			BIT_0
+#define CLK25_MASK				BIT_0
 //----------------------------------------
 
 
@@ -201,7 +203,7 @@ u16 numUartBytesReceived;
 #define CMD_QSPI_READ_COL              0x27
 #define CMD_SET_LVDS_CLK_DIV           0x28
 #define CMD_GET_LVDS_CLK_DIV           0x29
-#define CMD_LVDS_WRITE        		   0x2A
+#define CMD_LVDS_WRITE        	       0x2A
 #define CMD_EN_LVDS_VPROG              0x2B
 #define CMD_DIS_LVDS_VPROG             0x2C
 #define CMD_EN_LVDS_RESET              0x2D
@@ -220,9 +222,7 @@ u16 numUartBytesReceived;
 //----------------------------------------
 // responses that the zedboard will send back over UART
 //
-#define RESPONSE_QSPI_DONE             0x80
-#define RESPONSE_LVDS_DONE             0x81
-#define RESPONSE_FUSE_PROG_DONE        0x82
+#define RESPONSE_CMD_DONE             0x80
 //----------------------------------------
 
 
@@ -231,10 +231,13 @@ volatile unsigned int *lvdsClkDivider = (volatile unsigned int *) 0x43C00000;
 volatile unsigned int *lvdsTx = (volatile unsigned int *) 0x43C10000;
 
 u8 dummyVar;
-XGpio miscLvdsGpio;
+XGpio miscLvdsGpio, levShiftGpio, clk25Gpio;
 u32 dummyVar32 = 0x00000000;
-#define GPIO_CHANNEL 		1	// all GPIO ports defined in the PL as single channel
-#define QSPI_GPIO			XPAR_AXI_GPIO_1_DEVICE_ID
+#define GPIO_CHANNEL 			1	// all GPIO ports defined in the PL as single channel
+#define QSPI_GPIO_ID			XPAR_QSPI_GPIO_DEVICE_ID
+#define LEV_SHIFT_GPIO_ID   	XPAR_LEV_SHIFT_GPIO_DEVICE_ID
+#define CLK25_GPIO_ID			XPAR_EN_CLK25_GPIO_DEVICE_ID
+#define MISC_LVDS_GPIO_ID		XPAR_MISC_LVDS_GPIO_DEVICE_ID
 
 int main()
 {
@@ -473,7 +476,7 @@ static int SetupUartInterruptSystem(INTC *IntcInstancePtr,
 
 //------------------------------------------------------------
 void InitGPIO(void){
-	Status = XGpio_Initialize(&miscLvdsGpio, XPAR_GPIO_0_DEVICE_ID);
+	Status = XGpio_Initialize(&miscLvdsGpio, MISC_LVDS_GPIO_ID);
 	if (Status != XST_SUCCESS) {
 		return;
 	}
@@ -489,13 +492,30 @@ void InitGPIO(void){
 
 	//------------------------------
 	// initialize 6-bit port used for quad spi lines
-	Status = XGpio_Initialize(&QSPI_xGPIO, XPAR_GPIO_1_DEVICE_ID);
+	Status = XGpio_Initialize(&QSPI_xGPIO, QSPI_GPIO_ID);
 	if (Status != XST_SUCCESS){
 		return;
 	}
 	XGpio_SetDataDirection(&QSPI_xGPIO, GPIO_CHANNEL, 0x00);	// 1=input, 0=output, all 6 bits set as outputs
 	XGpio_DiscreteWrite(&QSPI_xGPIO, GPIO_CHANNEL, QSPI_CSB);	// CSb only line initially set high
 	//------------------------------
+
+	//------------------------------
+	Status = XGpio_Initialize(&levShiftGpio, LEV_SHIFT_GPIO_ID);
+	if (Status != XST_SUCCESS){
+		return;
+	}
+	XGpio_SetDataDirection(&levShiftGpio, GPIO_CHANNEL, 0b0);	// 1=input, 0=output
+	XGpio_DiscreteWrite(&levShiftGpio, GPIO_CHANNEL, 0);
+	//------------------------------
+
+	//------------------------------
+	Status = XGpio_Initialize(&clk25Gpio, CLK25_GPIO_ID);
+	if (Status != XST_SUCCESS){
+		return;
+	}
+	XGpio_SetDataDirection(&clk25Gpio, GPIO_CHANNEL, 0b0);	// 1=input, 0=output
+	XGpio_DiscreteWrite(&clk25Gpio, GPIO_CHANNEL, 0);
 }
 //------------------------------------------------------------
 
@@ -531,7 +551,7 @@ void ReadUartBytes(void){
 
 	// Initialize variables to be used in multiple cases
 	int toggle;
-	u8 current, new;
+	u8 current, new, regAddr, regData;
 
 	// check received byte for valid command
 	switch (commandByte){
@@ -546,7 +566,21 @@ void ReadUartBytes(void){
 			break;*/
 
 		case (CMD_QSPI_WRITE_REG):
-			startQspiTransaction(QSPI_CMD_REG_WRITE, 0xAA5F, 0xAA);
+			//verify 1 address byte, 1 data byte received after command byte
+			if (numBytesReceived<3){
+				return;
+			}
+
+			regAddr = (u8)UartRxData[1];
+			regData = (u8)UartRxData[2];
+			startQspiTransaction(QSPI_CMD_REG_WRITE, regAddr, regData);
+			send_byte_over_UART(RESPONSE_CMD_DONE);
+
+		/*case (CMD_QSPI_READ_REG):
+			regAddr = UartRxData[1];
+			startQspiTransaction(QSPI_CMD_REG_READ, regAddr,0);
+			send_byte_over_UART(fakeAsicRegisters[UartRxData[1]]);
+			break;*/
 
 		case (CMD_LVDS_WRITE):
 			//verify 2 address bytes, 1 data byte received after command byte
@@ -555,16 +589,16 @@ void ReadUartBytes(void){
 			}
 
 			u8 sofByte = 0b01111110;
-			u8 regAddr1 = (u8)UartRxData[1];
-			u8 regAddr2 = (u8)UartRxData[2];
+			u8 frameAddr1 = (u8)UartRxData[1];
+			u8 frameAddr2 = (u8)UartRxData[2];
 			u8 regData = (u8)UartRxData[3];
 			u8 eofByte = 0b10000001;
 
 			//lvdsTx[0] = 0xAAAAAAAA;
 			//lvdsTx[1] = 0x000000AA;
 
-			lvdsTx[0] = (sofByte << 24) | (regAddr1 << 16) |
-					(regAddr2 << 8) | regData; // 32 MSBs of message to be sent
+			lvdsTx[0] = (sofByte << 24) | (frameAddr1 << 16) |
+					(frameAddr2 << 8) | regData; // 32 MSBs of message to be sent
 			lvdsTx[1] = eofByte & 0x000000FF; // 8 LSBs of message to be sent*/
 			lvdsTx[2] = 0x00000001; // Enable LVDS_Tx WRITE
 			while(lvdsTx[3] == 0){
@@ -572,44 +606,70 @@ void ReadUartBytes(void){
 				continue;
 			}
 			lvdsTx[2] = 0x00000000; // Disable LVDS_Tx WRITE
-			send_byte_over_UART(RESPONSE_LVDS_DONE);
+			send_byte_over_UART(RESPONSE_CMD_DONE);
 			//xil_printf("done\n");
 			break;
 
 		case (CMD_EN_LVDS_VPROG):
 			current = XGpio_DiscreteRead(&miscLvdsGpio,GPIO_CHANNEL); // current settings of each of the MISC bits
-			new = current | LVDS_VPROG_MASK;
+			new = current | VPROG_MASK;
 			XGpio_DiscreteWrite(&miscLvdsGpio, GPIO_CHANNEL, 1);
+			send_byte_over_UART(RESPONSE_CMD_DONE);
 			break;
 
 		case (CMD_DIS_LVDS_VPROG):
 			current = XGpio_DiscreteRead(&miscLvdsGpio,GPIO_CHANNEL); // current settings of each of the MISC bits
-			new = current & ~LVDS_VPROG_MASK;
+			new = current & ~VPROG_MASK;
 			XGpio_DiscreteWrite(&miscLvdsGpio, GPIO_CHANNEL, 0);
+			send_byte_over_UART(RESPONSE_CMD_DONE);
 			break;
 
 		case (CMD_EN_LVDS_RESET):
 			current = XGpio_DiscreteRead(&miscLvdsGpio,GPIO_CHANNEL); // current settings of each of the MISC bits
-			new = current | LVDS_RESET_MASK;
+			new = current | RESET_MASK;
 			XGpio_DiscreteWrite(&miscLvdsGpio, GPIO_CHANNEL, new);
+			send_byte_over_UART(RESPONSE_CMD_DONE);
 			break;
 
 		case (CMD_DIS_LVDS_RESET):
 			current = XGpio_DiscreteRead(&miscLvdsGpio,1); // current settings of each of the MISC bits
-			new = current & ~LVDS_RESET_MASK;
+			new = current & ~RESET_MASK;
 			XGpio_DiscreteWrite(&miscLvdsGpio, GPIO_CHANNEL, new);
+			send_byte_over_UART(RESPONSE_CMD_DONE);
 			break;
 
 		case (CMD_EN_LVDS_DTB):
 			current = XGpio_DiscreteRead(&miscLvdsGpio,GPIO_CHANNEL); // current settings of each of the MISC bits
-			new = current | LVDS_DTB_MASK;
+			new = current | DTB_MASK;
 			XGpio_DiscreteWrite(&miscLvdsGpio, GPIO_CHANNEL, new);
+			send_byte_over_UART(RESPONSE_CMD_DONE);
 			break;
 
 		case (CMD_DIS_LVDS_DTB):
 			current = XGpio_DiscreteRead(&miscLvdsGpio,GPIO_CHANNEL); // current settings of each of the MISC bits
-			new = current & ~LVDS_DTB_MASK;
+			new = current & ~DTB_MASK;
 			XGpio_DiscreteWrite(&miscLvdsGpio, GPIO_CHANNEL, new);
+			send_byte_over_UART(RESPONSE_CMD_DONE);
+			break;
+
+		case (CMD_EN_CLK25):
+			XGpio_DiscreteWrite(&clk25Gpio, GPIO_CHANNEL, 0b1);
+			send_byte_over_UART(RESPONSE_CMD_DONE);
+			break;
+
+		case (CMD_DIS_CLK25):
+			XGpio_DiscreteWrite(&clk25Gpio, GPIO_CHANNEL, 0b0);
+			send_byte_over_UART(RESPONSE_CMD_DONE);
+			break;
+
+		case (CMD_EN_LEV_SHIFT):
+			XGpio_DiscreteWrite(&levShiftGpio, GPIO_CHANNEL, 1);
+			send_byte_over_UART(RESPONSE_CMD_DONE);
+			break;
+
+		case (CMD_DIS_LEV_SHIFT):
+			XGpio_DiscreteWrite(&levShiftGpio, GPIO_CHANNEL, 0);
+			send_byte_over_UART(RESPONSE_CMD_DONE);
 			break;
 
 		case (CMD_PROG_FUSES):
@@ -651,7 +711,7 @@ void ReadUartBytes(void){
 			// QSPI: set START=0 (reg12 bit 4)
 			usleep(5);
 			//dummyVar32 += 1;
-			send_byte_over_UART(RESPONSE_FUSE_PROG_DONE);
+			send_byte_over_UART(RESPONSE_CMD_DONE);
 			break;
 
 		case (CMD_READ_FUSES):

@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/SDO_LVDS.runs/impl_1/design_1_wrapper.tcl"
+  variable script "C:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.runs/impl_1/design_1_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -131,26 +131,26 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/SDO_LVDS.cache/wt [current_project]
-  set_property parent.project_path C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/SDO_LVDS.xpr [current_project]
+  set_property webtalk.parent_dir C:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.cache/wt [current_project]
+  set_property parent.project_path C:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.xpr [current_project]
   set_property ip_repo_paths {
   C:/Users/19165/Documents/Xilinx_Projects/ip_repo/LVDS_Tx_1_0
   C:/Users/19165/Documents/Xilinx_Projects/ip_repo/ClockDivider_1_0
   C:/Users/19165/digilent/vivado-library/ip
 } [current_project]
   update_ip_catalog
-  set_property ip_output_repo C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/SDO_LVDS.cache/ip [current_project]
+  set_property ip_output_repo C:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/SDO_LVDS.runs/synth_1/design_1_wrapper.dcp
+  add_files -quiet C:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.runs/synth_1/design_1_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/SDO_LVDS.srcs/sources_1/bd/design_1/design_1.bd
+  add_files C:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.srcs/sources_1/bd/design_1/design_1.bd
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/Users/19165/Documents/Xilinx_Projects/SDO_LVDS/SDO_LVDS.srcs/constrs_1/new/my_constraints.xdc
+  read_xdc C:/Users/19165/Documents/Xilinx_Projects/SDO_test/SDO_test.srcs/constrs_1/new/my_constraints.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }
